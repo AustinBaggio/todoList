@@ -34,18 +34,12 @@ class TaskScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                CircleAvatar(
-                  backgroundColor: kMainLightColor,
-                  foregroundColor: kMainDarkColor,
-                  radius: 30,
-                  child: Icon(Icons.list, size: 30),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  'Todo List',
-                  style: kTextTitle,
+                Padding(
+                  padding: const EdgeInsets.only(top:10.0),
+                  child: Text(
+                    'Todo List',
+                    style: kTextTitle,
+                  ),
                 ),
                 Text(
                   '${Provider.of<TaskData>(context).taskCount} tasks',
